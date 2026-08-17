@@ -1,4 +1,3 @@
-
 import "dotenv/config";
 import express from "express";
 
@@ -10,7 +9,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/health", (req, res) => {
-  res.send("NICE HEALTH!");
+  res.send({status: "ok"});
 });
 
 app.listen(PORT, () => {
