@@ -65,10 +65,16 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# dotenv environment variable files / local secrets
 .env
 .env.*
 !.env.example
+**/.env
+**/.env.*
+!**/.env.example
+/server/.env
+/server/.env.*
+!/server/.env.example
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -141,3 +147,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+.dockerignore
+.docker
