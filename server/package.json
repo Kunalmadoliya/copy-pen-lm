@@ -19,6 +19,7 @@
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "firecrawl": "^4.32.2",
     "multer": "^2.2.0",
     "path-to-regexp": "^8.4.2",
     "pg": "^8.23.0",
