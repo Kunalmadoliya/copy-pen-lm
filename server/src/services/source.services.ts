@@ -1,8 +1,8 @@
-// import { uploadPdfToCloudinary } from "../lib/cloudinary.js";
-// import { scrapeWebsite } from "../lib/firecrawl.js";
-// import { extractPdfFromBuffer } from "../lib/pdf.js";
-// import { enqueueSourceProcessing } from "../lib/source-events.js";
-// import { fetchYoutubeTranscript } from "../lib/youtube.js";
+import { uploadPdfToCloudinary } from "../lib/cloudinary.js";
+import { scrapeWebsite } from "../lib/firecrawl.js";
+import { extractPdfFromBuffer } from "../lib/pdf.js";
+import { enqueueSourceProcessing } from "../lib/source-events.js";
+import { fetchYoutubeTranscript } from "../lib/youtube.js";
 import {
     createSourceRecord,
     deleteSourceRecord,
@@ -28,7 +28,7 @@ async function createAndProcessSource(
         workspaceId: source.workspaceId,
     });
 
-    return source;
+    return source; 
 }
 
 
@@ -85,13 +85,13 @@ export async function createTextOrMarkdownSource(
 ) {
     await assertWorkspaceAccess(workspaceId, userId);
 
-    // return createAndProcessSource({
-    //     workspaceId,
-    //     type: input.type,
-    //     title: input.title,
-    //     content: input.content,
-    //     status: "PENDING",
-    // });
+    return createAndProcessSource({
+        workspaceId,
+        type: input.type,
+        title: input.title,
+        content: input.content,
+        status: "PENDING",
+    });
 }
 
 
